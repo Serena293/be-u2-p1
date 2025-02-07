@@ -1,0 +1,6 @@
+Gestire le prenotazioni delle postazioni aziendali
+
+1. Entity Edificio: nome Strin, indirizzo, città.
+2. Entity Postazione: codice univoco long, descrizione string, tipo enum, numero massimo di occupanti int, un edificio Edificio.
+3. Entity Prenotazione, valida per un solo giorno e solo se la postazione risulta libera.
+4. Utente può avere più prenotazioni in corso ma non più prenotazioni per la stesa data
