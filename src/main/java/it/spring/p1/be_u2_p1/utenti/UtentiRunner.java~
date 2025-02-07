@@ -1,0 +1,10 @@
+package it.spring.p1.be_u2_p1.utenti;
+
+import org.springframework.boot.CommandLineRunner;
+
+public class UtentiRunner implements CommandLineRunner {
+    @Override
+    public void run(String... args) throws Exception {
+        
+    }
+}

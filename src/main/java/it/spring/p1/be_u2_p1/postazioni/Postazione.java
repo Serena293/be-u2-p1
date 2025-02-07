@@ -25,7 +25,7 @@ public class Postazione {
     private TipoPostazione tipo;
     private int numeroMassimoDiOccupanti;
 
-    @OneToMany(mappedBy = "postazione", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "postazione", fetch = FetchType.LAZY)
     private List<Prenotazioni> prenotazioni;
 
     @ManyToOne

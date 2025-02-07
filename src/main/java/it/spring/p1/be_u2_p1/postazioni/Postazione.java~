@@ -25,10 +25,13 @@ public class Postazione {
     private TipoPostazione tipo;
     private int numeroMassimoDiOccupanti;
 
-    @OneToMany
+    @OneToMany(mappedBy = "postazione", fetch = FetchType.EAGER)
     private List<Prenotazioni> prenotazioni;
 
     @ManyToOne
     @JoinColumn(name = "id_edificio")
     private Edificio edificio;
+
+
+    //TOdo: controlla fetch
 }
