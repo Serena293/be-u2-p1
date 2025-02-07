@@ -1,7 +1,8 @@
 spring.application.name=be-u2-p1
-spring.jpa.hibernate.ddl-auto=create-drop
+spring.jpa.hibernate.ddl-auto=update
 spring.sql.init.mode=always
 spring.datasource.driverClassName=org.postgresql.Driver
-spring.datasource.url=jdbc:postgresql://localhost:/gestione_prenotazioni
+spring.datasource.url=jdbc:postgresql://localhost:5432/gestione_prenotazioni
 spring.datasource.username=postgres
 spring.datasource.password=00000000
+ logging.level.root=DEBUG

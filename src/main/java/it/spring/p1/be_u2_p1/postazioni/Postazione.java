@@ -6,6 +6,7 @@ import it.spring.p1.be_u2_p1.prenotazioni.Prenotazioni;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
@@ -20,10 +21,17 @@ public class Postazione {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long codiceUnivoco;
     private String descrizione;
+    @Enumerated(EnumType.STRING)
     private TipoPostazione tipo;
     private int numeroMassimoDiOccupanti;
-    @ManyToOne //Ogni edificio ha molte postazioni - unidirezionale
-    private Edificio edificio;
-    @OneToMany
+
+    @OneToMany(mappedBy = "postazione", fetch = FetchType.EAGER)
     private List<Prenotazioni> prenotazioni;
+
+    @ManyToOne
+    @JoinColumn(name = "id_edificio")
+    private Edificio edificio;
+
+
+    //TOdo: controlla fetch
 }

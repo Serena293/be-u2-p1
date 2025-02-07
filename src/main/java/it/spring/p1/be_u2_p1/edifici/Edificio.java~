@@ -1,5 +1,6 @@
-package it.spring.p1.be_u2_p1.utenti;
+package it.spring.p1.be_u2_p1.edifici;
 
+import it.spring.p1.be_u2_p1.postazioni.Postazione;
 import it.spring.p1.be_u2_p1.prenotazioni.Prenotazioni;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -12,13 +13,15 @@ import java.util.List;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "utente")
-public class Utente {
+@Table(name = "edifici")
+public class Edificio {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long idUtente;
+    private Long idEdificio;
     private String nome;
-    private String cognome;
-    @OneToMany(mappedBy = "utente", cascade = CascadeType.ALL) //un utente può avere più prenotazioni
-    private List<Prenotazioni> prenotazioni;
+    private String indirizzo;
+    private String citta;
+
+    @OneToMany(mappedBy = "postazione")
+     private List<Postazione> postazioni;
 }

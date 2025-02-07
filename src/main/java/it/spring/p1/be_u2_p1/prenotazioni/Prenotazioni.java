@@ -20,8 +20,12 @@ public class Prenotazioni {
     private Long idPrenotazione;
     @Column(nullable = false)
     private LocalDate dataPrenotazione;
-    @ManyToOne //Ogni prenotazione ha una sola postazione
+    @ManyToOne
+    @JoinColumn(name = "codice_univoco")//Ogni prenotazione ha una sola postazione
     private Postazione postazione;
-    @ManyToOne //Ogni prenotazione ha un utente
+    @ManyToOne
+    @JoinColumn(name = "id_utente")//Ogni prenotazione ha un utente
     private Utente utente;
 }
+
+//TODo: controlla join column
