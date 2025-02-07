@@ -18,7 +18,6 @@ public class Prenotazioni {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long idPrenotazione;
-    @Column(nullable = false)
     private LocalDate dataPrenotazione;
     @ManyToOne //Ogni prenotazione ha una sola postazione
     private Postazione postazione;

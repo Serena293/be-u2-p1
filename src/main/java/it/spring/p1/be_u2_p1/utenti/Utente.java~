@@ -6,8 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @Entity
 @AllArgsConstructor
@@ -20,5 +18,5 @@ public class Utente {
     private String nome;
     private String cognome;
     @OneToMany //un utente può avere più prenotazioni
-    private List<Prenotazioni> prenotazioni;
+    private Prenotazioni prenotazioni;
 }

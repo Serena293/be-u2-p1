@@ -24,5 +24,6 @@ public class Postazione {
     private int numeroMassimoDiOccupanti;
     @ManyToOne //Ogni edificio ha molte postazioni - unidirezionale
     private Edificio edificio;
+    @OneToMany
     private List<Prenotazioni> prenotazioni;
 }
