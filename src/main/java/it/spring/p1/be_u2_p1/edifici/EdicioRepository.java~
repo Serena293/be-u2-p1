@@ -1,4 +1,0 @@
-package it.spring.p1.be_u2_p1.edifici;
-
-public interface EdicioRepository {
-}
